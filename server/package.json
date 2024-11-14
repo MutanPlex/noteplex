@@ -1,0 +1,32 @@
+{
+  "name": "noteplex-server",
+  "version": "0.0.1",
+  "description": "NotePlex Note App Api Server",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MutanPlex/noteplex.git"
+  },
+  "keywords": [
+    "api-server",
+    "node.js",
+    "express.js",
+    "note-app"
+  ],
+  "author": "MutanPlex",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MutanPlex/noteplex/issues"
+  },
+  "homepage": "https://github.com/MutanPlex/noteplex#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mysql2": "^3.11.4"
+  }
+}
