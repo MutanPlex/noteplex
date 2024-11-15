@@ -1,29 +1,45 @@
-import favicon from "/favicon.ico";
 import "./App.css";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
+import Header from "./components/Header";
+import Navigation from "./components/Navigation";
+import Home from "./components/Home";
+import Notes from "./components/Notes";
+import Favorites from "./components/Favorites";
+import Notifications from "./components/Notifications";
+import Settings from "./components/Settings";
+
+
+const Main = () => {
+  return (
+    <main>
+      <Navigation />
+      <Outlet />
+    </main>
+  );
+};
 
 function App() {
-
   return (
     <>
-      <header>
-        <div className="left-container">
-          <div className="logo-container">
-            <a href="/">
-              <img src={favicon} className="logo" alt="NotePlex Logo" />
-            </a>
-            <p>NotePlex</p>
-          </div>
-          <div className="search-container">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input type="text" className="search" placeholder="Search for notes" />
-          </div>
-        </div>
-
-        <div className="log-reg-container">
-          <button>Login</button>
-          <button>Register</button>
-        </div>
-      </header>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />}>
+            <Route index element={<Home />} />
+            <Route path="notes" element={<Notes />} />
+            <Route path="favorites" element={<Favorites />} />
+            <Route path="notifications" element={<Notifications />} />
+            <Route path="settings" element={<Settings />} />
+            <Route path="*" element={<h1>Not Found</h1>} />
+          </Route>
+        </Routes>
+      </Router>
     </>
   );
 }
