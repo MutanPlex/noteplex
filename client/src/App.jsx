@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
 import Notes from "./components/Notes";
+import AddNote from "./components/AddNote";
 import Favorites from "./components/Favorites";
 import Notifications from "./components/Notifications";
 import Settings from "./components/Settings";
@@ -33,6 +34,7 @@ function App() {
           <Route path="/" element={<Main />}>
             <Route index element={<Home />} />
             <Route path="notes" element={<Notes />} />
+            <Route path="add-note" element={<AddNote/>} />
             <Route path="favorites" element={<Favorites />} />
             <Route path="notifications" element={<Notifications />} />
             <Route path="settings" element={<Settings />} />
