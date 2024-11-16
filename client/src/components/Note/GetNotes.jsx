@@ -7,6 +7,9 @@ const GetNotes = () => {
   const goToAddNote = () => {
     navigate("/add-note");
   };
+  const goToEditNote = () => {
+    navigate("/edit-note");
+  };
   return (
     <div className="notes">
       <div className="add-note note-box" onClick={goToAddNote}>
@@ -14,14 +17,14 @@ const GetNotes = () => {
           <i className="fa-solid fa-plus"></i>
         </h3>
       </div>
-      <div className="note-box">
+      <div className="note-box" onClick={goToEditNote}>
         <h3>My Second Note</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
           gravida, tortor nec bibendum varius, nunc elit
         </p>
       </div>
-      <div className="note-box">
+      <div className="note-box" onClick={goToEditNote}>
         <h3>My Third Note Long Title Have</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
