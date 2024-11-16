@@ -3,8 +3,13 @@ const mysql = require('mysql2');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
+const rateLimit = require('express-rate-limit');
 
 dotenv.config();
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100 
+});
 
 const app = express();
 
@@ -22,6 +27,9 @@ db.connect((err) => {
   if (err) throw err;
   console.log('MySQL connected.');
 });
+
+
+app.use(limiter);
 
 app.get('/api/test', (req, res) => {
   db.query('SELECT * FROM test', (err, results) => {
