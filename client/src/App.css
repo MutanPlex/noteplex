@@ -10,20 +10,14 @@
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 4fr;
   padding: 20px 2rem;
   background-color: #242424;
   color: white;
+  align-items: center;
 }
 
-.left-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 50vw;
-}
 .search-container{
   display: flex;
   align-items: center;
@@ -55,6 +49,9 @@ header {
   margin-left: 15px;
   color: #ffffffc9;
 }
+.log-reg-container{
+  justify-self: end;
+}
 main{
   display: grid;
   grid-template-columns: 1fr 64fr;
@@ -69,7 +66,7 @@ nav{
 }
 nav ul{
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(50px);
   border-radius: 50px;
 }
 nav i{
@@ -111,4 +108,51 @@ nav .bottom{
 }
 .rotate-180{
   transform: rotate(180deg);
+}
+
+/* NOTES PAGE */
+.notes-container{
+  position: relative;
+  top: 30px;
+}
+.notes{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, 210px); 
+  grid-auto-rows: 210px;
+  align-items: center;
+  justify-items: center;
+}
+.add-note{
+  display: inline-flex!important;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+.note-box{
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 0, 0, 0.4);
+  backdrop-filter: blur(50px);
+  transition: .3s;
+}
+.note-box:hover{
+  transition: .3s;
+  cursor: pointer;
+}
+.note-box h3{
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.note-box p{
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
