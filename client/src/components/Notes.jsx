@@ -1,4 +1,4 @@
-import GetNotes from "./GetNotes";
+import GetNotes from "./Note/GetNotes";
 const Notes = () => {
   return (
     <div>
