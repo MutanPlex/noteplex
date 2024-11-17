@@ -1,5 +1,17 @@
 import favicon from "/favicon.ico";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+
 const Header = () => {
+  
+  const navigate = useNavigate();
+
+  const goToLogin = () => {
+    navigate("/login");
+  };
+  const goToRegister = () => {
+    navigate("/register");
+  };
   return (
     <header>
       <div className="logo-container">
@@ -14,8 +26,8 @@ const Header = () => {
       </div>
 
       <div className="log-reg-container">
-        <button>Login</button>
-        <button>Register</button>
+        <button onClick={goToLogin}>Login</button>
+        <button onClick={goToRegister}>Register</button>
       </div>
     </header>
   );
