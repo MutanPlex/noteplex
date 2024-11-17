@@ -10,7 +10,7 @@ Currently, it is under active development, and some features are yet to be compl
 - **Frontend**: React, Vite
 - **Backend**: Express
 - **Database**: MySQL
-- **Other**: Font Awesome
+- **Other**: Font Awesome, Lexical, PrimeReact
 
 ## Getting Started
 
