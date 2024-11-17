@@ -15,7 +15,8 @@ import EditNote from "./components/Note/EditNote";
 import Favorites from "./components/Favorites";
 import Notifications from "./components/Notifications";
 import Settings from "./components/Settings";
-
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 const Main = () => {
   return (
@@ -35,11 +36,13 @@ function App() {
           <Route path="/" element={<Main />}>
             <Route index element={<Home />} />
             <Route path="notes" element={<Notes />} />
-            <Route path="add-note" element={<AddNote/>} />
-            <Route path="edit-note" element={<EditNote/>} />
+            <Route path="add-note" element={<AddNote />} />
+            <Route path="edit-note" element={<EditNote />} />
             <Route path="favorites" element={<Favorites />} />
             <Route path="notifications" element={<Notifications />} />
             <Route path="settings" element={<Settings />} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
             <Route path="*" element={<h1>Not Found</h1>} />
           </Route>
         </Routes>
