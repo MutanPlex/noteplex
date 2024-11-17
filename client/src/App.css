@@ -18,10 +18,11 @@ header {
   align-items: center;
 }
 
-.search-container{
+.search-container {
   display: flex;
   align-items: center;
 }
+
 .search-container input {
   width: calc(50vw - 150px);
   padding: 15px 20px 15px 40px;
@@ -29,12 +30,13 @@ header {
   border: none;
   background-color: #333333;
   color: white;
-  transition: .3s;
+  transition: 0.3s;
   outline: 1px solid #646cff00;
 }
+
 .search-container input:hover {
   outline: 1px solid #ff0000fd;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .search-container input::placeholder {
@@ -44,91 +46,109 @@ header {
 .search-container input:focus {
   outline: 1px solid #ff0000fd;
 }
-.search-icon{
+
+.search-icon {
   position: absolute;
   margin-left: 15px;
   color: #ffffffc9;
 }
-.log-reg-container{
+
+.log-reg-container {
   justify-self: end;
 }
-main{
+
+main {
   display: grid;
   grid-template-columns: 1fr 64fr;
   gap: 2rem;
   padding: 2rem;
 }
-nav{
+
+nav {
   height: 80vh;
   display: grid;
   align-items: start;
   grid-template-rows: calc(1.1rem * 12) [row-start] calc(1.1rem * 12) [row-start];
 }
-nav ul{
+
+nav ul {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(50px);
   border-radius: 50px;
 }
-nav i{
+
+nav i {
   font-size: 1.2rem;
   color: #ffffffff;
-  transition: .5s;
+  transition: 0.5s;
 }
-nav li{
+
+nav li {
   border-radius: 50%;
-  transition: .5s;
+  transition: 0.5s;
 }
-nav li a{
+
+nav li a {
   display: block;
-  padding: 1.2rem .65rem;
+  padding: 1.2rem 0.65rem;
 }
-nav li:hover{
+
+nav li:hover {
   background: rgba(255, 255, 255, 1);
   border-radius: 50px;
-  transition: .5s;
+  transition: 0.5s;
 }
-nav li:hover i{
+
+nav li:hover i {
   color: #ff0000fd;
-  transition: .5s;
+  transition: 0.5s;
 }
-ul{
+
+ul {
   list-style: none;
 }
-li{
+
+li {
   list-style: none;
   text-align: center;
 }
-a{
+
+a {
   text-decoration: none;
   color: white;
   margin: 0 10px;
 }
-nav .bottom{
+
+nav .bottom {
   align-self: end;
 }
-.rotate-180{
+
+.rotate-180 {
   transform: rotate(180deg);
 }
 
 /* NOTES PAGE */
-.notes-container{
+.notes-container {
   position: relative;
   top: 30px;
 }
-.notes{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, 210px); 
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 210px);
   grid-auto-rows: 210px;
   align-items: center;
   justify-items: center;
 }
-.add-note{
-  display: inline-flex!important;
+
+.add-note {
+  display: inline-flex !important;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
 }
-.note-box{
+
+.note-box {
   display: inline-block;
   width: 200px;
   height: 200px;
@@ -136,23 +156,68 @@ nav .bottom{
   border-radius: 10px;
   background: rgba(255, 0, 0, 0.4);
   backdrop-filter: blur(50px);
-  transition: .3s;
+  transition: 0.3s;
 }
-.note-box:hover{
-  transition: .3s;
+
+.note-box:hover {
+  transition: 0.3s;
   cursor: pointer;
 }
-.note-box h3{
+
+.note-box h3 {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.note-box p{
+
+.note-box p {
   display: -webkit-box;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* FORM */
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 51%;
+  gap: 1rem;
+  top: 10px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.form-container input {
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  outline: 1px solid #ff000000;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  transition: 0.3s;
+}
+
+.multiple-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-container input:hover {
+  outline: 1px solid #ff0000fd;
+  transition: 0.3s;
+}
+
+.form-container input:focus {
+  outline: 1px solid #ff0000fd;
+  transition: 0.3s;
+}
+.notif-box {
+  height: 24px;
 }
